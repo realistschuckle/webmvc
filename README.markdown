@@ -52,5 +52,7 @@ blog posts
 [Fielding's REST for R33LZ](http://curtis.schlak.com/2012/01/19/fieldings-rest.html)
 and
 [HATEOAS: A Follow-Up to Rest for R33lZ for BORAX](http://curtis.schlak.com/2012/01/23/hateoas-a-follow-up-to-rest-for-r33lz.html),
-this code describes what I've ironically called BORAX-programming
+this code describes what I've started calling BORAX-programming
 
+This ain't no
+[20-Mule Team BORAX](http://video.google.com/videoplay?docid=5782992666427964614).
