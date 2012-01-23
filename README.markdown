@@ -57,4 +57,4 @@ this code describes what I've started calling BORAX-programming
 ## Not your grandmother's BORAX!
 
 This ain't no
-[20-Mule Team BORAX](http://video.google.com/videoplay?docid=5782992666427964614).
+[20-Mule Team](http://video.google.com/videoplay?docid=5782992666427964614).
