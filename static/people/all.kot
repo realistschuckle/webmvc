@@ -1,5 +1,5 @@
-<link rel="unloaded-subentity-uri-template" href="../data/{entity}/{id}.kod">
-<link rel="unloaded-subentity-uri-template" href="./people/person.kot">
+<link rel="unloaded-subentity-uri-template" type="text/vnd.knockout-data" href="../data/{entity}/{id}.kod">
+<link rel="unloaded-subentity-uri-template" type="text/vnd.knockout-template" href="./people/person.kot">
 <table>
 	<thead>
 		<tr>

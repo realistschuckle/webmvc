@@ -44,6 +44,7 @@ if(!('mediatypes' in borax)) {
 
   var mediatypes = borax.mediatypes
     , rels = {}
+    , mimes = {}
     , urn2vars = {
         'urn\\:borax\\:organizations': {
           'createVars': function() {return {'entity': 'organizations'};},
@@ -133,6 +134,7 @@ if(!('mediatypes' in borax)) {
         var href = unescape(node.href);
         if(rels[node.rel].indexOf(href) < 0) {
           rels[node.rel].push(href);
+          mimes[href] = node.type;
         }
       }
     })
