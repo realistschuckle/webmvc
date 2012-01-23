@@ -1,0 +1,9 @@
+{
+	"all": [
+		{"uri":"#urn:borax:organization:1","name":"Twitter","url":"http://twitter.com"},
+		{"uri":"#urn:borax:organization:2","name":"Google","url":"http://google.com"},
+		{"uri":"#urn:borax:organization:3","name":"Facebook","url":"http://facebook.com"},
+		{"uri":"#urn:borax:organization:4","name":"Apple","url":"http://apple.com"},
+		{"uri":"#urn:borax:organization:5","name":"McDonalds","url":"http://mcdonalds.com"}
+	]
+}

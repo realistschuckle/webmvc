@@ -6,10 +6,8 @@ var http = require('http')
 var mimetypes = {
   '.html': 'text/html',
   '.js': 'application/javascript',
-  '.persont': 'text/vnd.borax.person-template',
-  '.persond': 'text/vnd.borax.person-data',
-  '.orgt':    'text/vnd.borax.organization-template',
-  '.orgd':    'text/vnd.borax.organization-data'
+  '.kot': 'text/vnd.knockout-template',
+  '.kod': 'text/vnd.knockout-data'
 }
 
 var server = http.createServer(function(req, res) {
@@ -21,7 +19,7 @@ var server = http.createServer(function(req, res) {
       code = 404;
       data = null;
     }
-    var extname = path.extname(url);
+    var extname = path.extname(rawurl);
     res.writeHead(code, {'Content-Type': mimetypes[extname] || 'text/html'});
     res.end(data);
   });

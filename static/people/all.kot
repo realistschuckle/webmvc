@@ -1,0 +1,18 @@
+<link rel="unloaded-subentity-uri-template" href="../data/{entity}/{id}.kod">
+<link rel="unloaded-subentity-uri-template" href="./people/person.kot">
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Height</th>
+			<th>Hotness</th>
+		</tr>
+	</thead>
+	<tbody data-bind="foreach: all">
+		<tr>
+			<td><a data-bind="attr : { href : uri }, text: name"></a></td>
+			<td data-bind='text: height'></td>
+			<td data-bind='text: hotness'></td>
+		</tr>
+	</tbody>
+</table>

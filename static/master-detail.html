@@ -1,41 +1,64 @@
 <html>
 	<head>
-		<script type='text/javascript' src='config.js'></script>
-		<script type='text/javascript' src='lib/jquery-1.7.1.js'></script>
-		<script type='text/javascript' src='lib/knockout-2.0.0.debug.js'></script>
-		<script type='text/javascript' src='lib/underscore.js'></script>
-		<script type='text/javascript' src='binding-helper.js'></script>
-		<script type='text/javascript'>
-			function testBind() {
-				var parts = getParts(window.location.search);
-				window[parts.ns].testBind();
-			}
-
-			$(document).ready(setup(window.location.search));
-		</script>
-		<script id="templates" type="text/html">
+		<title>Master-Detail</title>
+		<link rel="unloaded-subentities-uri-template" href="../data/{entity}/all.kod">
+		<link rel="unloaded-subentities-uri-template" href="./{entity}/all.kot">
+		<script src="lib/jquery-1.7.1.js"></script>
+		<script src="lib/json2.js"></script>
+		<script src="lib/underscore.js"></script>
+		<script src="lib/knockout-2.0.0.debug.js"></script>
+		<script src="lib/uri-template.js"></script>
+		<script src="mediatypes-registry.js"></script>
+		<script src="subentity-registry.js"></script>
+		<script src="subentity-navigate.js"></script>
+		<script>
+			$(function() {
+				borax.go = function() {borax.navigate.toFragment($("#subentities"));}
+				$(window).on('hashchange', function() {setTimeout(borax.go, 0)});
+				borax.go();
+			})
 		</script>
 	</head>
 	<body>
-		<a href="index.html">Back</a>	
-		<!--<a href="javascript:testBind()">Bind</a>-->
-		<!-- if using individual chunks: -->
-		<!--<div id="single" data-bind="with : active"></div>-->
-		<!-- if using KO templates --> 
-		<div id="single" data-bind="if: active">
-			<div data-bind="template : {name : 'template-single', data : active }"></div>
-		</div>
+		<nav>
+			<a href="index.html">Back</a>	
+		</nav>
+		<section>
+			<h1>Master-Detail Relationships</h1>
+			<p>
+				This page presents a master/detail relationship allowable through the
+				links embedded in the page.
+			</p>
+			<p>
+				If you browse the source of the page, you will see that it contains
+				a <code>link</code> tag with described relationships for the client
+				(this Web application) to use to work with an unloaded subentites
+				state transition.
+			</p>
+			<p>
+				This resource also loads an external resource named
+				"subentity-registry.js" which acts as the application's monitor for
+				the subentities that this resource can contain.
+			</p>
+			<pre><code>&lt;link rel="unloaded-subentities-uri-template" href="{/entity}"&gt;
+&lt;script src="subentity-registry.js"&gt;&lt;/script&gt;</code></pre>
+			<p>
+				So, with all of this in this page, we have two state transitions:
+				<ul>
+					<li>Follow the "Back" link at the top of the page</li>
+					<li>
+						Either initiate a transition (or as an application, automatically
+						follow the transition) templated in the <code>link</code> tag in
+						the <code>head</code>.
+					</li>
+				</ul>
+				For demonstrative purposes, this application automatically makes the
+				request on your behalf to transition the application to navigate to
+				the subentities represented by the URN in the fragment of the URL.
+			</p>
+		</section>
+		<div id="subentities">
 
-		<div id="buttons">
-			<input type="button" value="New" data-bind="click: add" />
-			<input type="submit" value="Update" data-bind="click: update" />
-			<input type="button" value="Delete" data-bind="click: remove" />
-		</div>
-
-		<!-- if using individual chunks: -->
-		<!--<div id="multi">-->
-		<!-- if using KO templates --> 
-		<div id="multi" data-bind="template: { name : 'template-multi' }">
 		</div>
 	</body>
 </html>

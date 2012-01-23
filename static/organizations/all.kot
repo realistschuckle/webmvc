@@ -1,0 +1,15 @@
+<link rel="unloaded-subentity-uri-template" href="../data/{entity}s/{id}.kod">
+<link rel="unloaded-subentity-uri-template" href="./{entity}s/{entity}.kot">
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody data-bind="foreach: all">
+		<tr>
+			<td><a data-bind="attr: { href: url }, text: name"></a></td>
+			<td><a data-bind="attr : { href : uri }">Edit</a></td>
+		</tr>
+	</tbody>
+</table>

@@ -1,10 +1,35 @@
+<!DOCTYPE html>
 <html>
-	<head></head>
+	<head>
+    <title>Entry Point</title>
+  </head>
 	<body>
-		Menu:
-		<ol>
-			<li><a href="master-detail.html?/organizations/">Organizations</a></li>
-			<li><a href="master-detail.html?/people/">People</a></li>
-		</ol>
+    <section>
+      <h1>Entry Point</h1>
+      <p>This page represents the entry point to the application.</p>
+      <p>
+        From here, the representation of the resource displays its allowed
+        transitions, one to organizataions and another to people.
+      </p>
+    </section>
+    <nav>
+      <h2>Technicals</h2>
+      <p>
+        These links use the master-detail.html page to load the subentity
+        collections specified by the urn in the fragment of the URL.
+      </p>
+  		<ol>
+  			<li>
+          <a href="master-detail.html#urn:borax:organizations">
+            Organizations (master-detail.html#urn:borax:organizations)
+          </a>
+        </li>
+  			<li>
+          <a href="master-detail.html#urn:borax:people">
+            People (master-detail.html#urn:borax:people)
+          </a>
+        </li>
+  		</ol>
+    </nav>
 	</body>
 </html>
