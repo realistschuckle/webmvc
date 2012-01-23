@@ -10,11 +10,9 @@ except:
 
 class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
   extensions_map = {
-    'persont': 'text/vnd.borax.person-template',
-    'persond': 'text/vnd.borax.person-data',
-    'orgt':    'text/vnd.borax.organization-template',
-    'orgd':    'text/vnd.borax.organization-data',
-    '':        'text/html',
+    'kot': 'text/vnd.knockout-template',
+    'kod': 'text/vnd.knockout-data',
+    '':    'text/html',
   }
 
 print "serving at port", PORT

@@ -1,4 +1,2 @@
-AddType text/vnd.borax.person-template persont
-AddType text/vnd.borax.person-data persond
-AddType text/vnd.borax.organization-template orgt
-AddType text/vnd.borax.organization-data orgd
+AddType text/vnd.knockout-template kot
+AddType text/vnd.knockout-data kod
